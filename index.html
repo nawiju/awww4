@@ -8,50 +8,148 @@
   </head>
   <style>
     .formcontainer{
-      width: 50%;
+      width: 90%;
       margin: auto;
-      margin-top: 10%;
-      background-color: linear-gradient(coral 0%, coral 30%, grey 100%);
+      margin-top: 0%;
+      padding-top: 2%;
+      padding-bottom: 2%;
+      padding-left: 2%;
+      padding-right: 2%;
+      background-color: coral;
       border-radius: 25px; 
+
     }
+    .container {
+      grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+      grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];
+    }
+    .item-a {
+      grid-column-start: 1;
+      grid-column-end: line3;
+      grid-row-start: row1-start;
+      grid-row-end: 3;
+    }
+    .item-c {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+
+    .parent {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+    }
+
+    .div1 { grid-area: 1 / 1 / 2 / 13; }
+    .div2 { grid-area: 2 / 4 / 3 / 10; }
+    .div3 { 
+      grid-area: 10 / 1 / 11 / 13; 
+      grid-column: 1/-1;
+      background: MediumOrchid;
+      padding: 1em;
+    }
+    .div4 { grid-area: 4 / 2 / 9 / 8; }
+    .div5 { grid-area: 4 / 9 / 9 / 12; }
+
+
+    .formvibe {
+      margin-bottom: 2%;
+    }
+
+    .footer1 {
+      background: linear-gradient(coral 0%, grey 100%);
+    }
+
+    html {
+      display: grid;
+      height: 100%;
+    }
+
+    .header1 {
+      background: linear-gradient(blue 0%, grey 100%); 
+      color: white;
+      padding: 1em;
+    }
+
+    .header2 {
+      background: linear-gradient(rgb(28, 0, 166) 0%, rgb(213, 52, 79) 40%, grey 100%);
+      color: white;
+      padding: 1em;
+    }
+
   </style>
 
-  <body>
-    <div class="formcontainer">
-    <form>
-      <div class="mb-3">
-        <label for="exampleTextbox" class="form-label">Textbox</label>
-        <input type="text" class="form-control" id="exampleTextbox">
+  <body class="parent">
+
+      <div class="div1 header1">
+        <h1 class="text-center">Form</h1>
+      </div>
+      
+      <div class="div2 header2">
+        <h3 class="text-center">form description</h3>
       </div>
 
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Checkbox</label>
-      </div>
+    <div class="formcontainer div4">
+      <form >
+        <div class="mb-3 formvibe">
+          <label for="exampleTextbox" class="form-label">Textbox</label>
+          <input type="text" class="form-control" id="exampleTextbox" placeholder="ugabuga">
+        </div>
+   
+   
+        <div class="mb-3 form-check formvibe">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Checkbox 1</label>
+        </div>
 
-      <select class="form-select" aria-label="Default select example">
-        <option selected>Select</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>
+        <div class="mb-3 form-check formvibe">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Checkbox 2</label>
+        </div>
 
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-        <label class="form-check-label" for="flexRadioDefault1">
-          Radio 1
-        </label>
-      </div>
-        
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-        <label class="form-check-label" for="flexRadioDefault2">
-          Radio 2
-        </label>
-      </div>
+        <div class="mb-3 form-check formvibe">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Checkbox 3</label>
+        </div>
 
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  </div>
+        <select class="form-select formvibe" aria-label="Default select example">
+          <option selected>Select</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+   
+   
+        <div class="form-check formvibe">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Radio 1
+          </label>
+        </div>
+         
+        <div class="form-check formvibe">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+          <label class="form-check-label" for="flexRadioDefault2">
+            Radio 2
+          </label>
+        </div>
+   
+   
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+
+    <div class="div5 formcontainer  ">
+      <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+    </div>
+
+    <div class="div3 footer1">
+      <h3 class="text-center">st00pka</h3>
+    </div>
+   
   </body>
 </html>
