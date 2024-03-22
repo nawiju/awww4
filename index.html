@@ -94,66 +94,78 @@
       </div>
 
     <div class="formcontainer div4">
-      <form >
+      <form class="needs-validation" novalidate>
         <div class="mb-3 formvibe">
           <label for="exampleTextbox" class="form-label">Input your name</label>
-          <input type="text" class="form-control" id="exampleTextbox" placeholder="Uga">
+          <input type="text" class="form-control" id="exampleTextbox" placeholder="Uga" required>
+          <div class="invalid-feedback">
+            Please enter a message in the textarea.
+          </div>
         </div>
         <div class="mb-3 formvibe">
           <label for="exampleTextbox" class="form-label">Input your surname</label>
-          <input type="text" class="form-control" id="exampleTextbox" placeholder="Buga">
+          <input type="text" class="form-control" id="exampleTextbox" placeholder="Buga" required>
+          <div class="invalid-feedback">
+            Please enter a message in the textarea.
+          </div>      
         </div>
    
         <h6>Select your favourite political systems</h6>
         <div class="mb-3 form-check formvibe">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">
           <label class="form-check-label" for="exampleCheck1">Communism</label>
+          <div class="invalid-feedback">Example invalid feedback text</div>
         </div>
 
         <div class="mb-3 form-check formvibe">
           <input type="checkbox" class="form-check-input" id="exampleCheck2">
           <label class="form-check-label" for="exampleCheck2">Anarchy</label>
+          <div class="invalid-feedback">Example invalid feedback text</div>
         </div>
 
         <div class="mb-3 form-check formvibe">
           <input type="checkbox" class="form-check-input" id="exampleCheck3">
           <label class="form-check-label" for="exampleCheck3">Anarchocommunism</label>
+          <div class="invalid-feedback">Example invalid feedback text</div>
         </div>
 
-        <select class="form-select formvibe" aria-label="Select your favourite Marxist thinker">
+        <select class="form-select formvibe" aria-label="Select your favourite Marxist thinker" required>
           <option selected>Select</option>
           <option value="1">Karl Marx</option>
           <option value="2">Friedrich Engels</option>
           <option value="3">Leon Trotsky</option>
+          <div class="invalid-feedback">Example invalid form file feedback</div>
         </select>
    
         <h6>For statistical purposes, we must ask you, what is your gender?</h6>
         <div class="form-check formvibe">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" required>
           <label class="form-check-label" for="flexRadioDefault1">
             Woman
           </label>
         </div>
          
         <div class="form-check formvibe">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked required>
           <label class="form-check-label" for="flexRadioDefault2">
             Man
           </label>
         </div>
 
         <div class="form-check formvibe">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked>
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" checked required>
           <label class="form-check-label" for="flexRadioDefault3">
             Other
           </label>
+          <div class="invalid-feedback">Example invalid form file feedback</div>
         </div>
 
         <div class="form-check formvibe">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked>
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" checked required>
           <label class="form-check-label" for="flexRadioDefault4">
             Prefer not to disclose
           </label>
+          <div class="invalid-feedback">Example invalid form file feedback</div>
         </div>
    
    
